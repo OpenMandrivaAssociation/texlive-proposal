@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-proposal
 Version:	20130219
-Release:	2
+Release:	3
 Summary:	A class for preparing proposals
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/proposal
