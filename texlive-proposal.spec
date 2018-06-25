@@ -1,5 +1,5 @@
 Name:		texlive-proposal
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	A class for preparing proposals
 Group:		Publishing
