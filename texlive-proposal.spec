@@ -1,13 +1,13 @@
 Name:		texlive-proposal
-Version:	20190228
+Version:	40538
 Release:	1
 Summary:	A class for preparing proposals
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/proposal
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/proposal.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/proposal.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/proposal.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/proposal.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/proposal.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/proposal.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +26,12 @@ European research proposals. The packages depend on the
 author's stex bundle.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,7 +42,8 @@ author's stex bundle.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
