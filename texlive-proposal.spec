@@ -1,6 +1,6 @@
 Name:		texlive-proposal
 Version:	40538
-Release:	1
+Release:	2
 Summary:	A class for preparing proposals
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/proposal
